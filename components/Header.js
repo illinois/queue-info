@@ -12,7 +12,7 @@ export default () => (
     dark
   >
     <Link href="/" passHref>
-      <NavbarBrand>Queues@Illinois</NavbarBrand>
+      <NavbarBrand>Queue@Illinois</NavbarBrand>
     </Link>
   </Navbar>
 )

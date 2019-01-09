@@ -1,5 +1,6 @@
 import React from 'react'
 import Document, { Head, Main, NextScript } from 'next/document'
+import { dom } from '@fortawesome/fontawesome-svg-core'
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -23,6 +24,7 @@ export default class MyDocument extends Document {
           />
           <title>Illinois Queue</title>
           <link rel="icon" href="/static/favicon.ico" type="image/png" />
+          <style>{dom.css()}</style>
         </Head>
         <body className="custom_class">
           <Main />
