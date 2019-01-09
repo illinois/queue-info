@@ -59,8 +59,6 @@ class Question extends React.Component {
             <div className="text-muted">
               <span className="text-muted" style={{ fontSize: '0.9rem' }}>
                 <span title="Location">{location}</span>
-                <span className="mr-2 ml-2">&bull;</span>
-                <span>3 minutes</span>
               </span>
             </div>
             <div title="Topic">{topic}</div>

@@ -31,6 +31,17 @@ const TOPICS = [
   ':ultrafastparrot:',
 ]
 
+const LOCATIONS = [
+  'siebel basement',
+  'on a balcony in summer air',
+  '0224',
+]
+
+const selectRandomElement = (arr) => {
+  const index = Math.floor(Math.random() * arr.length)
+  return arr[index]
+}
+
 const pickRandomElement = (arr) => {
   const index = Math.floor(Math.random() * arr.length)
   return arr.splice(index, 1)[0]
@@ -39,6 +50,19 @@ const pickRandomElement = (arr) => {
 const addRandomQuestion = (state) => {
   const name = pickRandomElement(state.availableStudents)
   const topic = pickRandomElement(state.availableTopics)
+  const location = selectRandomElement(LOCATIONS)
+  const key = state.key++;
+  state.questions.push({
+    key,
+    name,
+    topic,
+    location,
+  })
+}
+
+const addDeterministicQuestion = (state) => {
+  const [name] = state.availableStudents.splice(0, 1)
+  const [topic] = state.availableTopics.splice(0, 1)
   const key = state.key++;
   state.questions.push({
     key,
@@ -60,11 +84,14 @@ class RandomQueue extends React.Component {
     }
     
     // Populate initial state with three questions
+    // We use a deterministic selection here to avoid a mismatch between
+    // rendering on the server and on the client
     for (let i = 0; i < 3; i++) {
-      addRandomQuestion(this.state)
+      addDeterministicQuestion(this.state)
+      this.state.questions[i].location = LOCATIONS[i]
     }
     // Mark first question as being answered
-    this.state.questions[0].beingAnsweredBy = pickRandomElement(this.state.availableStaff)
+    this.state.questions[0].beingAnsweredBy = this.state.availableStaff.splice(0, 1)
   }
 
   advanceState() {
