@@ -22,6 +22,7 @@
     "next": "^7.0.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
+    "react-flip-move": "^3.0.3",
     "reactstrap": "^6.5.0"
   }
 }
