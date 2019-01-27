@@ -123,7 +123,27 @@ class RandomQueue extends React.Component {
   }
 
   componentDidMount() {
+    // This is to avoid having the browser queue up a bunch of changes while
+    // the user is on another tab - otherwise N changes will be flushed to
+    // the display at the same time when the user comes back to this tab,
+    // which temporarily kills perf
+    const startUpdates = () => {
+      this.interval = setInterval(() => this.advanceState(), 5000)
+    }
+    const stopUpdates = () => {
+      if (this.interval) {
+        clearInterval(this.interval)
+      }
+    }
+
     this.interval = setInterval(() => this.advanceState(), 5000)
+    window.addEventListener('focus', () => {
+      stopUpdates()
+      startUpdates()
+    })
+    window.addEventListener('blur', () => {
+      stopUpdates()
+    })
   }
 
   componentWillUnmount() {
