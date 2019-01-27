@@ -22,7 +22,6 @@ export default class MyDocument extends Document {
             integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
             crossOrigin="anonymous"
           />
-          <title>Illinois Queue</title>
           <link rel="icon" href="/static/favicon.ico" type="image/png" />
           <style>{dom.css()}</style>
         </Head>

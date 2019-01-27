@@ -91,7 +91,7 @@ class RandomQueue extends React.Component {
       this.state.questions[i].location = LOCATIONS[i]
     }
     // Mark first question as being answered
-    this.state.questions[0].beingAnsweredBy = this.state.availableStaff.splice(0, 1)
+    this.state.questions[0].beingAnsweredBy = this.state.availableStaff.splice(0, 1)[0]
   }
 
   advanceState() {

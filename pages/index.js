@@ -1,8 +1,8 @@
 import React from 'react'
 
-import { Button, Container, ListGroup, Row, Col } from 'reactstrap'
+import { Button, Container, Row, Col, Badge } from 'reactstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCode, faBolt } from '@fortawesome/free-solid-svg-icons'
+import { faCode, faBolt, faChartBar } from '@fortawesome/free-solid-svg-icons'
 
 import Header from '../components/Header'
 import RandomQueue from '../components/RandomQueue'
@@ -28,14 +28,24 @@ export default () => (
     <Container className="mt-4">
       <img src="https://via.placeholder.com/780x438?text=Video+goes+here" className="dummy-video ml-auto mr-auto mb-4 d-block" />
       <h3><FontAwesomeIcon icon={faBolt} size="lg" className="mr-2" fixedWidth />Real-time</h3>
-      <p>Everyone using a queue will see changes to the queue as they happen withoug the need to refresh the page.</p>
+      <p className="mb-4">
+        Everyone using a queue will see changes to the queue as they happen withoug the need to refresh the page.
+      </p>
 
       <h3><FontAwesomeIcon icon={faCode} size="lg" className="mr-2" fixedWidth />Open source</h3>
-      <p>
-        Don't see the feature you want? The Illinois Queue software is open
+      <p className="mb-4">
+        Don't see the feature you want? The Queue is open
         source, so you can contribute new features or bug fixes. Or, join the
         conversation on the Slack team or GitHub issues to help shape the
-        future of the queue.
+        future of The Queue.
+      </p>
+
+      <h3><FontAwesomeIcon icon={faChartBar} size="lg" className="mr-2" fixedWidth />Powerful analytics</h3>
+      <Badge color="success">Coming soon!</Badge>
+      <p className="mb-4">
+        Your staff and users generate a lot of data when the use The Queue.
+        Harness that data to understand how your queues are used, how to
+        better schedule your staff, and more.
       </p>
     </Container>
     <style jsx>{`
