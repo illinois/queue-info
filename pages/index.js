@@ -29,7 +29,7 @@ export default () => (
       <img src="https://via.placeholder.com/780x438?text=Video+goes+here" className="dummy-video ml-auto mr-auto mb-4 d-block" />
       <h3><FontAwesomeIcon icon={faBolt} size="lg" className="mr-2" fixedWidth />Real-time</h3>
       <p className="mb-4">
-        Everyone using a queue will see changes to the queue as they happen withoug the need to refresh the page.
+        Everyone using a queue will see changes to the queue as they happen without the need to refresh the page.
       </p>
 
       <h3><FontAwesomeIcon icon={faCode} size="lg" className="mr-2" fixedWidth />Open source</h3>
