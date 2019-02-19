@@ -30,8 +30,8 @@ export default () => (
       <img src="https://via.placeholder.com/780x438?text=Video+goes+here" className="dummy-video ml-auto mr-auto mb-4 d-block" />
       <h3>No more lines</h3>
       <p className="mb-4">
-        With the Queue, there's no need to wait in long lines or argue over who should be helped first.
-        You can wait and work wherever you are and queue staff will come to you when it's your turn.
+        With the Queue, there&apos;s no need to wait in long lines or argue over who should be helped first.
+        You can wait and work wherever you are and queue staff will come to you when it&apos;s your turn.
       </p>
 
       <h3>Real-time</h3>
@@ -51,10 +51,10 @@ export default () => (
       <Container>
         <Row >
           <Col>
-            <h3>The Queue is open-source</h3>
+            <h3>Open source</h3>
             <p>
-              Don't see the feature you want? The Queue is open
-              source, so you can contribute new features or bug fixes. Or, join the
+              Don&apos;t see the feature you want? The Queue is open-source,
+              so you can contribute new features or bug fixes. Or, join the
               conversation on the Slack team or GitHub issues to help shape the
               future of The Queue.
             </p>
