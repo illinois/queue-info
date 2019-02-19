@@ -1,0 +1,32 @@
+{
+  "name": "queue-info",
+  "version": "1.0.0",
+  "description": "A public-facing landing page for the Illinois Queue",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/illinois/queue-info.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/illinois/queue-info/issues"
+  },
+  "homepage": "https://github.com/illinois/queue-info#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.12",
+    "@fortawesome/free-brands-svg-icons": "^5.6.3",
+    "@fortawesome/free-solid-svg-icons": "^5.6.3",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "next": "^7.0.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-flip-move": "^3.0.3",
+    "reactstrap": "^7.1.0"
+  }
+}
