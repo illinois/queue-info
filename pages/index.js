@@ -11,7 +11,7 @@ import RandomQueue from '../components/RandomQueue'
 export default () => (
   <>
     <Header />
-    <Container fluid className="bg-dark hero">
+    <Container fluid className="bg-dark py-3">
       <Row>
         <Col md="6">
           <h1 className="text-light">The Queue helps power office hours, academic advising, lectures, and more.</h1>
@@ -71,13 +71,6 @@ export default () => (
       </Container>
     </Container>
     <style jsx>{`
-      .hero {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-      }
-      .hero-button {
-        margin-bottom: 100px;
-      }
       .dummy-video {
         width: 100%;
         max-width: 780px;
