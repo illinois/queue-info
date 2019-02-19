@@ -3,6 +3,7 @@ import React from 'react'
 import { Button, Container, Row, Col, Badge } from 'reactstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCode, faBolt, faChartBar } from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faSlack } from '@fortawesome/free-brands-svg-icons'
 
 import Header from '../components/Header'
 import RandomQueue from '../components/RandomQueue'
@@ -27,26 +28,47 @@ export default () => (
     </Container>
     <Container className="mt-4">
       <img src="https://via.placeholder.com/780x438?text=Video+goes+here" className="dummy-video ml-auto mr-auto mb-4 d-block" />
-      <h3><FontAwesomeIcon icon={faBolt} size="lg" className="mr-2" fixedWidth />Real-time</h3>
+      <h3>No more lines</h3>
       <p className="mb-4">
-        Everyone using a queue will see changes to the queue as they happen without the need to refresh the page.
+        With the Queue, there's no need to wait in long lines or argue over who should be helped first.
+        You can wait and work wherever you are and queue staff will come to you when it's your turn.
       </p>
 
-      <h3><FontAwesomeIcon icon={faCode} size="lg" className="mr-2" fixedWidth />Open source</h3>
+      <h3>Real-time</h3>
       <p className="mb-4">
-        Don't see the feature you want? The Queue is open
-        source, so you can contribute new features or bug fixes. Or, join the
-        conversation on the Slack team or GitHub issues to help shape the
-        future of The Queue.
+        You can monitor your position in the queue without needing to refresh the page. And your instructors
+        will get notifications whenever someone new joins the queue so they can help you as quickly as possible.
       </p>
 
-      <h3><FontAwesomeIcon icon={faChartBar} size="lg" className="mr-2" fixedWidth />Powerful analytics</h3>
+      <h3>Powerful analytics</h3>
       <Badge color="success">Coming soon!</Badge>
       <p className="mb-4">
-        Your staff and users generate a lot of data when the use The Queue.
-        Harness that data to understand how your queues are used, how to
-        better schedule your staff, and more.
+        Staff will soon be able to use the data generated from The Queue to better understand how students use
+        their queues, how to better schedule their staff, and more.
       </p>
+    </Container>
+    <Container fluid className="bg-dark text-white py-4">
+      <Container>
+        <Row >
+          <Col>
+            <h3>The Queue is open-source</h3>
+            <p>
+              Don't see the feature you want? The Queue is open
+              source, so you can contribute new features or bug fixes. Or, join the
+              conversation on the Slack team or GitHub issues to help shape the
+              future of The Queue.
+            </p>
+            <Button color="light" className="mr-3" tag="a" href="https://github.com/illinois/queue">
+              <FontAwesomeIcon icon={faGithub} size="lg" className="mr-2" fixedWidth />
+              GitHub
+            </Button>
+            <Button color="light" className="mr-4" tag="a" href="https://illinois-oss.slack.com/">
+              <FontAwesomeIcon icon={faSlack} size="lg" className="mr-2" fixedWidth />
+              Slack
+            </Button>
+          </Col>
+        </Row>
+      </Container>
     </Container>
     <style jsx>{`
       .hero {
