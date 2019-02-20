@@ -116,7 +116,7 @@ export default () => (
       .dummy-video {
         width: 100%;
         max-width: 780px;
-        border: solid 1px black;
+        box-shadow: 0 13px 27px -5px rgba(50,50,93,.25), 0 8px 16px -8px rgba(0,0,0,.3);
       }
     `}</style>
   </>
