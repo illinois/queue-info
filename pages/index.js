@@ -97,10 +97,18 @@ export default () => (
         </Row>
       </Container>
     </Container>
-    <Container>
+    <Container className="mt-5">
+      <Row>
+        <Col md="6">
+          <h3 className="bottom-cta-header">Ready to get started?</h3>
+          <p className="bottom-cta-copy">Sign in or request a queue for your course.</p>
+        </Col>
+        <Col md="6" className="d-flex align-items-center justify-content-md-end">
+          <Button color="primary" className="mr-4 mb-4" tag="a" href="https://queue.illinois.edu/q/">Go to the Queue</Button>
+          <Button color="secondary" className="mb-4" tag="a" href="https://go.illinois.edu/new-queue/">Request a queue</Button>
+        </Col>
+      </Row>
       <div className="mt-4 text-center">
-        <Button color="primary" className="mr-4 mb-4" tag="a" href="https://queue.illinois.edu/q/">Go directly to the Queues @ Illinois ➤</Button>
-        <Button color="secondary" className="mb-4" tag="a" href="https://go.illinois.edu/new-queue/">Request a queue for your course ➤</Button>
       </div>
     </Container>
     <Container fluid className="py-4">
@@ -117,6 +125,14 @@ export default () => (
         width: 100%;
         max-width: 780px;
         box-shadow: 0 13px 27px -5px rgba(50,50,93,.25), 0 8px 16px -8px rgba(0,0,0,.3);
+      }
+      .bottom-cta-header {
+        font-weight: 300;
+        font-size: 2.5rem;
+      }
+      .bottom-cta-copy {
+        font-weight: 300;
+        font-size: 1.5rem;
       }
     `}</style>
   </>
