@@ -15,7 +15,7 @@ export default () => (
       <Row>
         <Col md="6">
           <h1 className="text-light">The Illinois Queue</h1>
-          <h4 className="text-light">The Queue allows students and instructors to be productive and utilize or time more efficiently.</h4>
+          <h4 className="text-light">The Queue allows students, instructors, advisors, and more to be productive and utilize their time more effectively.</h4>
           <div className="mt-4">
             <Button color="primary" className="mr-4 mb-4" tag="a" href="https://queue.illinois.edu/q/">Go directly to the Queues @ Illinois ➤</Button>
             <br />
@@ -42,15 +42,15 @@ export default () => (
         <Col md="4">
           <h4><FontAwesomeIcon icon={faBan} size="lg" className="mr-2" fixedWidth />No More Lines</h4>
           <p className="mb-4">
-            With the Queue, there&apos;s no need to wait in long lines or argue over who should be helped first.
-            You can wait and work wherever you are and queue staff will come to you when it&apos;s your turn.
+            With the Queue, students don&apos;t need to wait in long lines or argue over who should be helped first.
+            They can wait and work wherever they are and an instructor can come to them when it&apos;s their turn.
           </p>
         </Col>
 
         <Col md="4">
           <h4><FontAwesomeIcon icon={faUsers} size="lg" className="mr-2" fixedWidth />Open Office Hours</h4>
           <p className="mb-4">
-            The queue eliminates the need for hand-raising and trying to keep track of who raised their hand first. If an instructor has overflowing office hours,
+            The Queue eliminates the need for hand-raising and trying to keep track of who raised their hand first. If an instructor has overflowing office hours,
             instructors can allow students can let the instructor know where they are within a nearby area, and what they need help with.
           </p>
         </Col>
@@ -58,7 +58,7 @@ export default () => (
         <Col md="4">
           <h4><FontAwesomeIcon icon={faChalkboardTeacher} size="lg" className="mr-2" fixedWidth />Group Formation and Active Learning</h4>
           <p className="mb-4">
-            Instructors can use the queue for group formation and explanation. By grouping students together based on the topic they are having trouble with,
+            Instructors can use the Queue for group formation and explanation. By grouping students together based on the topic they are having trouble with,
             the instructor doesn&apos;t have to explain the same concept to several students separately. While in class, students can post questions in the queue
             so that instructors can better prepare themselves prior to helping them.
           </p>
@@ -67,8 +67,8 @@ export default () => (
         <Col md="4">
           <h4><FontAwesomeIcon icon={faBolt} size="lg" className="mr-2" fixedWidth />Real Time</h4>
           <p className="mb-4">
-            You can monitor your position in the queue without needing to refresh the page. And your instructors
-            will get notifications whenever someone new joins the queue so they can help you as quickly as possible.
+            Students can monitor their position in a queue without needing to refresh the page. And instructors
+            will get notifications whenever someone new joins the queue so they can help students as quickly as possible.
           </p>
         </Col>
 
@@ -76,9 +76,8 @@ export default () => (
           <h4><FontAwesomeIcon icon={faChartBar} size="lg" className="mr-2" fixedWidth />Powerful Analytics</h4>
           <Badge color="success">Coming soon!</Badge>
           <p className="mb-4">
-            Your staff and users generate a lot of data when the use The Queue.
-            Harness that data to understand how your queues are used, how to
-            better schedule your staff, and more.
+            Instructors can harness data from their queues to understand how office hours are used,
+            how to better schedule their staff, and more.
           </p>
         </Col>
       </Row>
@@ -90,9 +89,9 @@ export default () => (
             <h3>Open source</h3>
             <p>
               Don&apos;t see the feature you want? The Queue is open-source,
-              so you can contribute new features or bug fixes. Or, join the
+              so anyone can contribute new features or bug fixes. Or, join the
               conversation on the Slack team or GitHub issues to help shape the
-              future of The Queue.
+              future of the Queue.
             </p>
             <Button color="light" className="mr-3" tag="a" href="https://github.com/illinois/queue">
               <FontAwesomeIcon icon={faGithub} size="lg" className="mr-2" fixedWidth />
