@@ -5,10 +5,18 @@ import { ListGroup } from 'reactstrap'
 import Question from './Question'
 
 const STAFF = [
-  'Nathan Walters',
-  'Genna Helsel',
-  'Jordi Paris Ferrer',
-  'Wade Fagen-Ulmschneider',
+  'TA - Nathan Walters',
+  'TA - Genna Helsel',
+  'TA - Jordi Paris Ferrer',
+  'Prof. Wade Fagen-Ulmschneider',
+  'CA - Jacqueline Osborn',
+  'CA - Rittika Adhikari',
+  'CA - James Wang',
+  'Prof. Karin Jensen',
+  'Prof. Karle Flanagan',
+  'Prof. Jenny Amos',
+  'Prof. Lawrence Angrave',
+  'Prof. Christopher Schmitz',
 ]
 
 const STUDENTS = [
@@ -19,22 +27,27 @@ const STUDENTS = [
   'Karlie Kloss',
   'Elon Musk',
   'Grace Hopper',
-  'Steve Jobs',
   'Emma Watson',
   'Albert Einstein',
 ]
 
 const TOPICS = [
-  'EMERGENCY????',
-  'MP3 reverse is segfaulting at line 420',
-  'Houston, we have a problem',
-  ':ultrafastparrot:',
+  'Homework #2, Problem 5: Confused on unit conversation',
+  'Clarification on the meaning of r on a scatter plot',
+  'I don\'t understand how to read a box plot',
+  'Page 147: Why do we multiply by x instead of dividing?',
+  'MP7 draw_maze() segfaults when running but never segfaults when using gdb'
 ]
 
 const LOCATIONS = [
-  'siebel basement',
+  'red benches in siebel basement',
+  '0224 SC',
   'on a balcony in summer air',
-  '0224',
+  'lincoln hall 1204',
+  'FLB G32',
+  'BIF coffee shop',
+  'alma mater',
+  'courtyard cafe'
 ]
 
 const selectRandomElement = (arr) => {
