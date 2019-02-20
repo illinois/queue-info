@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Button, Container, Row, Col, Badge } from 'reactstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCode, faBolt, faChartBar, faVideo } from '@fortawesome/free-solid-svg-icons'
+import { faBolt, faChartBar, faVideo, faChalkboardTeacher, faUsers, faBan } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faSlack } from '@fortawesome/free-brands-svg-icons'
 
 import Header from '../components/Header'
@@ -40,7 +40,7 @@ export default () => (
         </Col>
 
         <Col md="4">
-          <h4><FontAwesomeIcon icon={faBolt} size="lg" className="mr-2" fixedWidth />No more lines</h4>
+          <h4><FontAwesomeIcon icon={faBan} size="lg" className="mr-2" fixedWidth />No More Lines</h4>
           <p className="mb-4">
             With the Queue, there&apos;s no need to wait in long lines or argue over who should be helped first.
             You can wait and work wherever you are and queue staff will come to you when it&apos;s your turn.
@@ -48,7 +48,7 @@ export default () => (
         </Col>
 
         <Col md="4">
-          <h4><FontAwesomeIcon icon={faBolt} size="lg" className="mr-2" fixedWidth />Open Office Hours</h4>
+          <h4><FontAwesomeIcon icon={faUsers} size="lg" className="mr-2" fixedWidth />Open Office Hours</h4>
           <p className="mb-4">
             The queue eliminates the need for hand-raising and trying to keep track of who raised their hand first. If an instructor has overflowing office hours,
             instructors can allow students can let the instructor know where they are within a nearby area, and what they need help with.
@@ -56,7 +56,7 @@ export default () => (
         </Col>
 
         <Col md="4">
-          <h4><FontAwesomeIcon icon={faBolt} size="lg" className="mr-2" fixedWidth />Group Formation and Active Learning</h4>
+          <h4><FontAwesomeIcon icon={faChalkboardTeacher} size="lg" className="mr-2" fixedWidth />Group Formation and Active Learning</h4>
           <p className="mb-4">
             Instructors can use the queue for group formation and explanation. By grouping students together based on the topic they are having trouble with,
             the instructor doesn&apos;t have to explain the same concept to several students separately. While in class, students can post questions in the queue
@@ -73,7 +73,7 @@ export default () => (
         </Col>
 
         <Col md="4">
-          <h4><FontAwesomeIcon icon={faChartBar} size="lg" className="mr-2" fixedWidth />Powerful analytics</h4>
+          <h4><FontAwesomeIcon icon={faChartBar} size="lg" className="mr-2" fixedWidth />Powerful Analytics</h4>
           <Badge color="success">Coming soon!</Badge>
           <p className="mb-4">
             Your staff and users generate a lot of data when the use The Queue.
