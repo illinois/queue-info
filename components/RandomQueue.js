@@ -8,7 +8,7 @@ const STAFF = [
   'Nathan Walters',
   'Genna Helsel',
   'Jordi Paris Ferrer',
-  'Wade Fagen',
+  'Wade Fagen-Ulmschneider',
 ]
 
 const STUDENTS = [
