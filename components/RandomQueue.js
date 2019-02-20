@@ -82,6 +82,10 @@ class RandomQueue extends React.Component {
       questions: [],
       key: 0,
     }
+
+    this.windowFocused = this.windowFocused.bind(this)
+    this.windowBlurred = this.windowBlurred.bind(this)
+
     
     // Populate initial state with three questions
     // We use a deterministic selection here to avoid a mismatch between
@@ -122,32 +126,33 @@ class RandomQueue extends React.Component {
     this.setState(newState)
   }
 
+  windowFocused() {
+    if (this.interval) {
+      clearInterval(this.interval)
+    }
+    this.interval = setInterval(() => this.advanceState(), 5000)
+  }
+
+  windowBlurred() {
+    if (this.interval) {
+      clearInterval(this.interval)
+    }
+  }
+
   componentDidMount() {
     // This is to avoid having the browser queue up a bunch of changes while
     // the user is on another tab - otherwise N changes will be flushed to
     // the display at the same time when the user comes back to this tab,
     // which temporarily kills perf
-    const startUpdates = () => {
-      this.interval = setInterval(() => this.advanceState(), 5000)
-    }
-    const stopUpdates = () => {
-      if (this.interval) {
-        clearInterval(this.interval)
-      }
-    }
-
     this.interval = setInterval(() => this.advanceState(), 5000)
-    window.addEventListener('focus', () => {
-      stopUpdates()
-      startUpdates()
-    })
-    window.addEventListener('blur', () => {
-      stopUpdates()
-    })
+    window.addEventListener('focus', this.windowFocused)
+    window.addEventListener('blur', this.windowBlurred)
   }
 
   componentWillUnmount() {
     clearInterval(this.interval)
+    window.removeEventListener('focus', this.windowFocused)
+    window.removeEventListener('blur', this.windowBlurred)
   }
 
   render() {
