@@ -29,25 +29,17 @@ export default () => (
       </Row>
     </Container>
     <Container className="mt-4">
-      <Row>
-        <Col md="4">
-          <h4><FontAwesomeIcon icon={faVideo} size="lg" className="mr-2" fixedWidth />1-Minute Overview</h4>
-          <video className="dummy-video ml-auto mr-auto mb-4 d-block" controls>
+      <Row className="justify-content-center">
+        <Col xl="6" lg="8">
+          <video className="dummy-video mx-auto mb-4 d-block" controls>
             <source src="https://queue.illinois.edu/hosted/queue-video.mp4" type="video/mp4" />
             <source src="https://queue.illinois.edu/hosted/queue-video.webm" type="video/webm" />
             https://queue.illinois.edu/hosted/queue-video.mp4
           </video>        
         </Col>
-
-        <Col md="4">
-          <h4><FontAwesomeIcon icon={faBan} size="lg" className="mr-2" fixedWidth />No More Lines</h4>
-          <p className="mb-4">
-            With the Queue, students don&apos;t need to wait in long lines or argue over who should be helped first.
-            They can wait and work wherever they are and an instructor can come to them when it&apos;s their turn.
-          </p>
-        </Col>
-
-        <Col md="4">
+      </Row>
+      <Row>
+        <Col md="6" className="mb-3">
           <h4><FontAwesomeIcon icon={faUsers} size="lg" className="mr-2" fixedWidth />Open Office Hours</h4>
           <p className="mb-4">
             The Queue eliminates the need for hand-raising and trying to keep track of who raised their hand first. If an instructor has overflowing office hours,
@@ -55,7 +47,7 @@ export default () => (
           </p>
         </Col>
 
-        <Col md="4">
+        <Col md="6" className="mb-3">
           <h4><FontAwesomeIcon icon={faChalkboardTeacher} size="lg" className="mr-2" fixedWidth />Group Formation and Active Learning</h4>
           <p className="mb-4">
             Instructors can use the Queue for group formation and explanation. By grouping students together based on the topic they are having trouble with,
@@ -64,7 +56,7 @@ export default () => (
           </p>
         </Col>
         
-        <Col md="4">
+        <Col md="6" className="mb-3">
           <h4><FontAwesomeIcon icon={faBolt} size="lg" className="mr-2" fixedWidth />Real Time</h4>
           <p className="mb-4">
             Students can monitor their position in a queue without needing to refresh the page. And instructors
@@ -72,7 +64,7 @@ export default () => (
           </p>
         </Col>
 
-        <Col md="4">
+        <Col md="6" className="mb-3">
           <h4><FontAwesomeIcon icon={faChartBar} size="lg" className="mr-2" fixedWidth />Powerful Analytics</h4>
           <Badge color="success">Coming soon!</Badge>
           <p className="mb-4">
