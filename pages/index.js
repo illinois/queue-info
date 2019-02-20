@@ -15,7 +15,7 @@ export default () => (
       <Row>
         <Col md="6">
           <h1 className="text-light">The Illinois Queue</h1>
-          <h4 className="text-light">The Queue allows students and instructors to be productive and utilize or time more efficiently.</h4>          
+          <h4 className="text-light">The Queue allows students and instructors to be productive and utilize or time more efficiently.</h4>
           <div className="mt-4">
             <Button color="primary" className="mr-4 mb-4" tag="a" href="https://queue.illinois.edu/q/">Go directly to the Queues @ Illinois ➤</Button>
             <br />
@@ -50,7 +50,7 @@ export default () => (
         <Col md="4">
           <h4><FontAwesomeIcon icon={faBolt} size="lg" className="mr-2" fixedWidth />Open Office Hours</h4>
           <p className="mb-4">
-            The queue eliminates the need for hand-raising and trying to keep track of who raised their hand first.  If an instructor has overflowing office hours,
+            The queue eliminates the need for hand-raising and trying to keep track of who raised their hand first. If an instructor has overflowing office hours,
             instructors can allow students can let the instructor know where they are within a nearby area, and what they need help with.
           </p>
         </Col>
@@ -58,8 +58,8 @@ export default () => (
         <Col md="4">
           <h4><FontAwesomeIcon icon={faBolt} size="lg" className="mr-2" fixedWidth />Group Formation and Active Learning</h4>
           <p className="mb-4">
-            Instructors can use the queue for group formation and explanation.  By grouping students together based on the topic they are having trouble with,
-            the instructor doesn't have to explain the same concept to several students separately.  While in class, students can post questions in the queue
+            Instructors can use the queue for group formation and explanation. By grouping students together based on the topic they are having trouble with,
+            the instructor doesn&apos;t have to explain the same concept to several students separately. While in class, students can post questions in the queue
             so that instructors can better prepare themselves prior to helping them.
           </p>
         </Col>
