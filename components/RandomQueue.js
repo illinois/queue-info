@@ -157,7 +157,7 @@ class RandomQueue extends React.Component {
     // the user is on another tab - otherwise N changes will be flushed to
     // the display at the same time when the user comes back to this tab,
     // which temporarily kills perf
-    this.interval = setInterval(() => this.advanceState(), 5000)
+    this.interval = setInterval(() => this.advanceState(), 15000)
     window.addEventListener('focus', this.windowFocused)
     window.addEventListener('blur', this.windowBlurred)
   }
