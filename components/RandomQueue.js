@@ -9,6 +9,14 @@ const STAFF = [
   'Genna Helsel',
   'Jordi Paris Ferrer',
   'Wade Fagen-Ulmschneider',
+  'Jacqueline Osborn',
+  'Rittika Adhikari',
+  'James Wang',
+  'Karin Jensen',
+  'Karle Flanagan',
+  'Jenny Amos',
+  'Lawrence Angrave',
+  'Christopher Schmitz',
 ]
 
 const STUDENTS = [
@@ -19,22 +27,27 @@ const STUDENTS = [
   'Karlie Kloss',
   'Elon Musk',
   'Grace Hopper',
-  'Steve Jobs',
   'Emma Watson',
   'Albert Einstein',
 ]
 
 const TOPICS = [
-  'EMERGENCY????',
-  'MP3 reverse is segfaulting at line 420',
-  'Houston, we have a problem',
-  ':ultrafastparrot:',
+  'Homework #2, Problem 5: Confused on unit conversation',
+  'Clarification on the meaning of r on a scatter plot',
+  'I don\'t understand how to read a box plot',
+  'Page 147: Why do we multiply by x instead of dividing?',
+  'MP7 draw_maze() segfaults when running but never segfaults when using gdb'
 ]
 
 const LOCATIONS = [
-  'siebel basement',
+  'red benches in siebel basement',
+  '0224 SC',
   'on a balcony in summer air',
-  '0224',
+  'lincoln hall 1204',
+  'FLB G32',
+  'BIF coffee shop',
+  'alma mater',
+  'courtyard cafe'
 ]
 
 const selectRandomElement = (arr) => {
@@ -144,7 +157,7 @@ class RandomQueue extends React.Component {
     // the user is on another tab - otherwise N changes will be flushed to
     // the display at the same time when the user comes back to this tab,
     // which temporarily kills perf
-    this.interval = setInterval(() => this.advanceState(), 5000)
+    this.interval = setInterval(() => this.advanceState(), 10000)
     window.addEventListener('focus', this.windowFocused)
     window.addEventListener('blur', this.windowBlurred)
   }
