@@ -13,9 +13,10 @@ export default () => (
     color="dark"
     dark
   >
-    <Link href="/" passHref>
+    {/*<Link href="/" passHref>
       <NavbarBrand>Queue@Illinois</NavbarBrand>
-    </Link>
+</Link>*/}
+    <span></span>
     <a href="https://github.com/illinois/queue">
       <FontAwesomeIcon icon={faGithub} size="lg" className="ml-auto text-light" fixedWidth />
     </a>
