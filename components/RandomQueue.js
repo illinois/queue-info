@@ -5,18 +5,18 @@ import { ListGroup } from 'reactstrap'
 import Question from './Question'
 
 const STAFF = [
-  'TA - Nathan Walters',
-  'TA - Genna Helsel',
-  'TA - Jordi Paris Ferrer',
-  'Prof. Wade Fagen-Ulmschneider',
-  'CA - Jacqueline Osborn',
-  'CA - Rittika Adhikari',
-  'CA - James Wang',
-  'Prof. Karin Jensen',
-  'Prof. Karle Flanagan',
-  'Prof. Jenny Amos',
-  'Prof. Lawrence Angrave',
-  'Prof. Christopher Schmitz',
+  'Nathan Walters',
+  'Genna Helsel',
+  'Jordi Paris Ferrer',
+  'Wade Fagen-Ulmschneider',
+  'Jacqueline Osborn',
+  'Rittika Adhikari',
+  'James Wang',
+  'Karin Jensen',
+  'Karle Flanagan',
+  'Jenny Amos',
+  'Lawrence Angrave',
+  'Christopher Schmitz',
 ]
 
 const STUDENTS = [
@@ -157,7 +157,7 @@ class RandomQueue extends React.Component {
     // the user is on another tab - otherwise N changes will be flushed to
     // the display at the same time when the user comes back to this tab,
     // which temporarily kills perf
-    this.interval = setInterval(() => this.advanceState(), 15000)
+    this.interval = setInterval(() => this.advanceState(), 10000)
     window.addEventListener('focus', this.windowFocused)
     window.addEventListener('blur', this.windowBlurred)
   }
