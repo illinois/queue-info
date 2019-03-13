@@ -11,7 +11,6 @@ import Link from "next/link";
 import { withRouter } from "next/router";
 
 const Header = ({ router }) => {
-  console.log(router.route);
   const { route } = router;
   const isBlog = route.startsWith("/blog");
   return (
