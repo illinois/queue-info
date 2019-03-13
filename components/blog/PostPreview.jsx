@@ -9,7 +9,7 @@ const PostPreview = ({ meta, slug }) => (
       <h3>
         <Link href={`/blog/${slug}`}><a>{meta.title}</a></Link>
       </h3>
-      <small className="secondary">
+      <small className="small text-muted">
         {formatDate(meta.date, "dddd, MMMM Do YYYY")} (
         {distanceInWordsToNow(meta.date, {
           addSuffix: true

@@ -1,6 +1,6 @@
 import React from "react";
-import { Container } from "reactstrap";
 import PostPreview from "../../components/blog/PostPreview";
+import Container from "../../components/Container";
 
 function importAll(r) {
   return r.keys().map(key => {
@@ -14,9 +14,7 @@ function importAll(r) {
 const blogItemsMeta = importAll(require.context(".", false, /\.mdx$/));
 
 const items = blogItemsMeta.map(({ post, slug }) => {
-  return (
-    <PostPreview meta={post.meta} slug={slug} key={slug} />
-  );
+  return <PostPreview meta={post.meta} slug={slug} key={slug} />;
 });
 
 const BlogIndex = () => (
@@ -27,3 +25,5 @@ const BlogIndex = () => (
 );
 
 export default BlogIndex;
+
+export { blogItemsMeta };
