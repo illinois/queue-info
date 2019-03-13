@@ -23,6 +23,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.7.2",
     "@fortawesome/free-solid-svg-icons": "^5.7.2",
     "@fortawesome/react-fontawesome": "^0.1.4",
+    "@zeit/next-mdx": "^1.2.0",
     "next": "^8.0.1",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
