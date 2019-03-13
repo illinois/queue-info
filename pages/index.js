@@ -56,7 +56,7 @@ export default () => {
       </Container>
       <Container className="mt-3">
         {blogPost && (
-          <Alert color="primary" className="d-flex">
+          <Alert color="primary" className="d-flex" fade={false}>
             <span className="mr-auto">{blogPost.post.meta.title}</span>
             <strong>
               <Link prefetch href={`/blog/${blogPost.slug}`}>
