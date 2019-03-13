@@ -7,11 +7,12 @@ import {
   NavItem,
   NavLink,
   Collapse,
-  Container,
 } from "reactstrap";
 import Link from "next/link";
 import { withRouter } from "next/router";
 import { useBoolean } from "react-hanger";
+
+import Container from './Container'
 
 const Header = ({ router }) => {
   const isOpen = useBoolean(false)
