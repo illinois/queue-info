@@ -13,7 +13,7 @@ const PostPreview = ({ meta, slug }) => (
         {formatDate(meta.date, "dddd, MMMM Do YYYY")} (
         {distanceInWordsToNow(meta.date, {
           addSuffix: true
-        })}
+        })})
       </small>
     </header>
   </article>

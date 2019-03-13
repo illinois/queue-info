@@ -1,12 +1,24 @@
-import withPost from '../../components/blog/WithPost'
+import withPost from "../../components/blog/WithPost";
+import Image from "../../components/Image";
 
 export const meta = {
-  title: 'New Release: Confidential Queues, Programmatic Admission Control & More',
-  date: '2019-03-13'
-}
+  title:
+    "New Release: Confidential Queues, Programmatic Admission Control & More",
+  date: "2019-03-13",
+  authors: [{
+    name: 'Nathan Walters',
+    github: 'nwalters512',
+  }, {
+    name: 'Jacqueline Osborn',
+    github: 'jackieo5023',
+    avatar: '/static/team/jackie.jpeg'
+  }]
+};
 
-export default withPost({ ...meta })
+export default withPost({ ...meta });
 
-## Hello, world!
+Welcome to the Queue blog!
 
-How's it going?
+## Programmatic admission control
+
+<Image src="/static/blog/confidential-queues-programmatic-admission-control/admission-control-settings.png" />

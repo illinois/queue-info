@@ -6,7 +6,8 @@ import {
   Nav,
   NavItem,
   NavLink,
-  Collapse
+  Collapse,
+  Container,
 } from "reactstrap";
 import Link from "next/link";
 import { withRouter } from "next/router";
@@ -17,20 +18,22 @@ const Header = ({ router }) => {
   const { route } = router;
   const isBlog = route.startsWith("/blog");
   return (
-    <Navbar color="dark" dark expand="md" className="mb-3 fixed-top">
-      <Link href="/" passHref>
-        <NavbarBrand>Queue@Illinois</NavbarBrand>
-      </Link>
-      <NavbarToggler onClick={isOpen.toggle} />
-      <Collapse isOpen={isOpen.value} navbar>
-        <Nav navbar>
-          <NavItem active={isBlog}>
-            <Link href="/blog" passHref>
-              <NavLink>Blog</NavLink>
-            </Link>
-          </NavItem>
-        </Nav>
-      </Collapse>
+    <Navbar color="dark" dark expand="sm" className="mb-3 fixed-top">
+      <Container>
+        <Link href="/" passHref>
+          <NavbarBrand>Queue@Illinois</NavbarBrand>
+        </Link>
+        <NavbarToggler onClick={isOpen.toggle} />
+        <Collapse isOpen={isOpen.value} navbar>
+          <Nav navbar className="ml-auto">
+            <NavItem active={isBlog}>
+              <Link href="/blog" passHref>
+                <NavLink>Blog</NavLink>
+              </Link>
+            </NavItem>
+          </Nav>
+        </Collapse>
+      </Container>
     </Navbar>
   );
 };

@@ -4,7 +4,7 @@ import Head from "next/head";
 import { PageTransition } from "next-page-transitions";
 import Header from "../components/Header";
 
-const TIMEOUT = 200
+const TIMEOUT = 200;
 
 export default class MyApp extends App {
   static async getInitialProps({ Component, router, ctx }) {
@@ -25,10 +25,7 @@ export default class MyApp extends App {
           <title>Queue@Illinois</title>
         </Head>
         <Header />
-        <PageTransition
-          timeout={TIMEOUT}
-          classNames="page-transition"
-        >
+        <PageTransition timeout={TIMEOUT} classNames="page-transition">
           <Component {...pageProps} key={router.route} />
         </PageTransition>
         <style global jsx>{`
@@ -40,6 +37,7 @@ export default class MyApp extends App {
             position: relative;
             padding-top: 56px;
             padding-bottom: 5rem;
+            -webkit-font-smoothing: antialiased;
           }
           .page-transition-enter {
             opacity: 0;
