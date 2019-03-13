@@ -7,7 +7,7 @@ const PostPreview = ({ meta, slug }) => (
   <article>
     <header>
       <h3>
-        <Link href={`/blog/${slug}`}>{meta.title}</Link>
+        <Link href={`/blog/${slug}`}><a>{meta.title}</a></Link>
       </h3>
       <small className="secondary">
         {formatDate(meta.date, "dddd, MMMM Do YYYY")} (

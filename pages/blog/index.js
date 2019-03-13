@@ -21,7 +21,7 @@ const items = blogItemsMeta.map(({ post, slug }) => {
 
 const BlogIndex = () => (
   <Container>
-    <h1 className="display-1 mb-5">Blog</h1>
+    <h1 className="text-center my-5">Blog</h1>
     {items}
   </Container>
 );

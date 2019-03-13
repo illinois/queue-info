@@ -5,23 +5,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBolt, faChartBar, faChalkboardTeacher, faUsers } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faSlack } from '@fortawesome/free-brands-svg-icons'
 
-import RandomQueue from '../components/RandomQueue'
-
 export default () => (
   <>
     <Container fluid className="bg-dark py-3">
       <Row className="justify-content-center">
-        <Col sm="10" md="8" lg="6" className="d-flex flex-column justify-content-center py-3 py-md-5 py-lg-0 hero-text-column">
+        <Col sm="10" md="8" lg="6" className="d-flex flex-column justify-content-center py-3 py-md-5 py-lg-0 text-center">
           <h1 className="text-light mb-4">Queue@Illinois</h1>
           <h4 className="text-light mb-4">The Queue allows students, instructors, advisors, and more to be productive and utilize their time more effectively.</h4>
           <div>
             <Button color="primary" className="m-2 ml-lg-0" tag="a" href="https://queue.illinois.edu/q/">Go to the Queue</Button>
             <Button color="secondary" className="m-2" tag="a" href="https://go.illinois.edu/new-queue/">Request a queue</Button>
           </div>
-        </Col>
-        <Col xl="1" className="d-none d-xl-block" />
-        <Col md="6" xl="5" className="d-none d-lg-block">
-          <RandomQueue />
         </Col>
       </Row>
     </Container>
