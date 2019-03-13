@@ -8,8 +8,12 @@ import {
   Collapse
 } from "reactstrap";
 import Link from "next/link";
+import { withRouter } from "next/router";
 
-const Header = () => {
+const Header = ({ router }) => {
+  console.log(router.route);
+  const { route } = router;
+  const isBlog = route.startsWith("/blog");
   return (
     <Navbar color="dark" dark expand="md">
       <Link href="/" passHref>
@@ -17,14 +21,10 @@ const Header = () => {
       </Link>
       <Collapse isOpen={true}>
         <Nav navbar>
-          <NavItem>
-            <NavLink>Home</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink>Blog</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink>Docs</NavLink>
+          <NavItem active={isBlog}>
+            <Link href="/blog" passHref>
+              <NavLink>Blog</NavLink>
+            </Link>
           </NavItem>
         </Nav>
       </Collapse>
@@ -32,4 +32,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default withRouter(Header);
