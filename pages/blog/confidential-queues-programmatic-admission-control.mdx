@@ -1,30 +1,40 @@
-import withPost from "../../components/blog/WithPost";
-import Image from "../../components/Image";
+import withPost from '../../components/blog/WithPost'
+import Image from '../../components/Image'
 
 export const meta = {
   title:
-    "New Release: Confidential Queues, Programmatic Admission Control & More",
-  date: "2019-03-13",
+    'New Release: Confidential Queues, Programmatic Admission Control & More',
+  date: '2019-03-13',
   featured: true,
   authors: [
     {
-      name: "Nathan Walters",
-      github: "nwalters512",
-      avatar: "/static/team/nathan.jpg"
+      name: 'Nathan Walters',
+      github: 'nwalters512',
+      avatar: '/static/team/nathan.jpg',
     },
     {
-      name: "Jacqueline Osborn",
-      github: "jackieo5023",
-      avatar: "/static/team/jackie.jpeg"
-    }
-  ]
-};
+      name: 'Jacqueline Osborn',
+      github: 'jackieo5023',
+      avatar: '/static/team/jackie.jpeg',
+    },
+  ],
+}
 
-export default withPost({ ...meta });
+export default withPost({ ...meta })
 
 ## Confidential queues
 
-Jackie pls write me.
+In an ordinary queue, information such as a student's name, location, and topic are available for anyone to view. However, we've noticed a great amount of use cases where you would want to keep this information private. Thus, a new type of queue was created &mdash; a _confidential queue_! With a confidential queue, other students only know the number of people on the queue and the number of people in front of them.
+
+For members on course staff of a confidential queue, the queue will still look the same as always, save for a little icon denoting the confidentiality of the queue by the title. Students on the queue will see something like the picture below.
+
+<Image
+  src="/static/blog/confidential-queues-programmatic-admission-control/confidential-queue-student-view.jpg"
+  caption="The confidential queue view from a student perspective"
+  shadow
+/>
+
+When creating a confidential queue, all you have to do is toggle the setting on creation! Keep in mind that you will not be able to change this once the queue is created.
 
 ## Programmatic admission control
 
