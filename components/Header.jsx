@@ -1,4 +1,4 @@
-import React, { useRef, useCallback, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import {
   Navbar,
   NavbarBrand,
