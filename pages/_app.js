@@ -21,9 +21,6 @@ export default class MyApp extends App {
     const { Component, pageProps, router } = this.props
     return (
       <Container>
-        <Head>
-          <title>Queue@Illinois</title>
-        </Head>
         <Header />
         <PageTransition timeout={TIMEOUT} classNames="page-transition">
           <Component {...pageProps} key={router.route} />

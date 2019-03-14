@@ -1,12 +1,12 @@
 import React from 'react'
 import { MDXProvider } from '@mdx-js/tag'
-import { Row } from 'reactstrap'
 
 import Container from '../Container'
 import PostDate from './PostDate'
 import PostAuthor from './PostAuthor'
 
 import 'prismjs/themes/prism-okaidia.css'
+import HeadTitle from '../HeadTitle'
 
 // Customize mdx components for Bootstrap
 const components = {
@@ -24,6 +24,7 @@ export default meta => ({ children }) => {
   })
   return (
     <Container className="mt-3">
+      <HeadTitle title={`Blog - ${meta.title}`} />
       <h1 className="text-center h2">{meta.title}</h1>
       <div className="small text-muted text-center">
         <PostDate date={meta.date} />

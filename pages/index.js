@@ -12,6 +12,7 @@ import {
 import { faGithub, faSlack } from '@fortawesome/free-brands-svg-icons'
 
 import { blogItemsMeta } from './blog'
+import HeadTitle from '../components/HeadTitle'
 
 export default () => {
   const blogPost = (blogItemsMeta || []).find(post => {
@@ -20,6 +21,7 @@ export default () => {
 
   return (
     <>
+      <HeadTitle />
       <Container fluid className="bg-dark py-3">
         <Row className="justify-content-center">
           <Col
