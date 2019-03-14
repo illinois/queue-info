@@ -22,7 +22,11 @@ export default class MyApp extends App {
     return (
       <Container>
         <Header />
-        <PageTransition timeout={TIMEOUT} classNames="page-transition">
+        <PageTransition
+          timeout={TIMEOUT}
+          classNames="page-transition"
+          skipInitialTransition
+        >
           <Component {...pageProps} key={router.route} />
         </PageTransition>
         <style global jsx>{`
