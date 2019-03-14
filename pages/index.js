@@ -28,13 +28,13 @@ export default () => {
             sm="10"
             md="8"
             lg="6"
-            className="d-flex flex-column justify-content-center py-3 py-md-5 py-lg-0 text-center"
+            className="d-flex flex-column justify-content-center py-4 text-center"
           >
             <h1 className="text-light mb-4">Queue@Illinois</h1>
-            <h4 className="text-light mb-4">
+            <h2 className="text-light mb-4 h5">
               The Queue allows students, instructors, advisors, and more to be
               productive and utilize their time more effectively.
-            </h4>
+            </h2>
             <div>
               <Button
                 color="primary"
