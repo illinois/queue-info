@@ -40,7 +40,7 @@ When creating a confidential queue, all you have to do is toggle the setting on 
 
 By default, anyone at Illinois can add themselves to any other queue without any restrictions. This is generally a good thing &mdash; it allows for flexibility and allows instructors to not have to worry about keeping rosters up to date. So far we haven't seen people abusing the system by adding themselves to random queues, which is great!
 
-However, maybe you do want to restrict your queue to only people on your official roster. Or maybe you have other reasons you want to keep certain questions off your queue. For instance, in CS 225, a lot of people put overly-short topics, like "lab" or "mp6". We prefer that students write more descriptive topics to show that they've put some thought into the question they're asking. But right now, we have to enfore that policy manually.
+However, maybe you do want to restrict your queue to only people on your official roster. Or maybe you have other reasons you want to keep certain questions off your queue. For instance, in CS 225, some people put non-descriptive topics like "lab" or "mp6". We want to encourage students to write descriptive topics to show that they've put some thought into the question they're asking.
 
 Enter _programmatic admission control_. This feature allows you to specify an HTTP endpoint that will be used to validate each question that is submitted to your queue. Based on the topic, location, or user information, you can decide to either allow a question or reject it and show a reason to the student.
 
@@ -65,9 +65,9 @@ app.post('/', (req, res) => {
 app.listen(port, () => console.log(`listening on port ${port}`)
 ```
 
-This is a pretty simple example of an admission control policy: it only required that question have a topic with 10 or more characters. But because the interface to your policy is plain old HTTP, you can write your policy in any language, with any tool, using any data you want. For example, in CS 225, we're working on a machine learning model that can automatically classify certain questions as bad to encourage students to write more descriptive questions without any intervention from staff!
+This is a pretty simple example of an admission control policy: it only requires that question have a topic with 10 or more characters. But because the interface to your policy is plain old HTTP, you can write your policy in any language, with any tool, using any data you want. For example, in CS 225, we're working on a machine learning model that can automatically encourage students to write more descriptive questions without any intervention from staff!
 
-Ton configure an admission control policy for your queue, check out the new queue settings page, accessing from the "Settings" button on your queue cards. Look out for more new features to be available on this page in the coming months!
+To configure an admission control policy for your queue, check out the new queue settings page, accessible from the "Settings" button on your queue cards. Look out for more new features to be available on this page in the coming months!
 
 <Image
   src="/static/blog/confidential-queues-programmatic-admission-control/admission-control-settings.png"
