@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react'
 
 const PostAuthor = ({ name, github, avatar }) => (
   <div className="d-inline-flex flex-row align-items-center px-3 pb-2">
-    <img src={avatar || "/static/team/default.png"} className="avatar" />
+    <img src={avatar || '/static/team/default.png'} className="avatar" />
     <div>
       <div className="small d-flex flex-column">
         {name}
@@ -19,6 +19,6 @@ const PostAuthor = ({ name, github, avatar }) => (
       }
     `}</style>
   </div>
-);
+)
 
-export default PostAuthor;
+export default PostAuthor

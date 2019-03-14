@@ -1,20 +1,20 @@
-import React from "react";
+import React from 'react'
 
-import { Button, Container, Row, Col, Badge, Alert } from "reactstrap";
-import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Button, Container, Row, Col, Badge, Alert } from 'reactstrap'
+import Link from 'next/link'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faBolt,
   faChartBar,
   faChalkboardTeacher,
-  faUsers
-} from "@fortawesome/free-solid-svg-icons";
-import { faGithub, faSlack } from "@fortawesome/free-brands-svg-icons";
+  faUsers,
+} from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faSlack } from '@fortawesome/free-brands-svg-icons'
 
-import { blogItemsMeta } from "./blog";
+import { blogItemsMeta } from './blog'
 
 export default () => {
-  const blogPost = (blogItemsMeta || []).find((post) => {
+  const blogPost = (blogItemsMeta || []).find(post => {
     return post.post.meta.featured
   })
 
@@ -269,5 +269,5 @@ export default () => {
         }
       `}</style>
     </>
-  );
-};
+  )
+}

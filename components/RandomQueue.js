@@ -34,9 +34,9 @@ const STUDENTS = [
 const TOPICS = [
   'Homework #2, Problem 5: Confused on unit conversation',
   'Clarification on the meaning of r on a scatter plot',
-  'I don\'t understand how to read a box plot',
+  "I don't understand how to read a box plot",
   'Page 147: Why do we multiply by x instead of dividing?',
-  'MP7 draw_maze() segfaults when running but never segfaults when using gdb'
+  'MP7 draw_maze() segfaults when running but never segfaults when using gdb',
 ]
 
 const LOCATIONS = [
@@ -47,24 +47,24 @@ const LOCATIONS = [
   'FLB G32',
   'BIF coffee shop',
   'alma mater',
-  'courtyard cafe'
+  'courtyard cafe',
 ]
 
-const selectRandomElement = (arr) => {
+const selectRandomElement = arr => {
   const index = Math.floor(Math.random() * arr.length)
   return arr[index]
 }
 
-const pickRandomElement = (arr) => {
+const pickRandomElement = arr => {
   const index = Math.floor(Math.random() * arr.length)
   return arr.splice(index, 1)[0]
 }
 
-const addRandomQuestion = (state) => {
+const addRandomQuestion = state => {
   const name = pickRandomElement(state.availableStudents)
   const topic = pickRandomElement(state.availableTopics)
   const location = selectRandomElement(LOCATIONS)
-  const key = state.key++;
+  const key = state.key++
   state.questions.push({
     key,
     name,
@@ -73,10 +73,10 @@ const addRandomQuestion = (state) => {
   })
 }
 
-const addDeterministicQuestion = (state) => {
+const addDeterministicQuestion = state => {
   const [name] = state.availableStudents.splice(0, 1)
   const [topic] = state.availableTopics.splice(0, 1)
-  const key = state.key++;
+  const key = state.key++
   state.questions.push({
     key,
     name,
@@ -88,7 +88,7 @@ const addDeterministicQuestion = (state) => {
 class RandomQueue extends React.Component {
   constructor(props) {
     super(props)
-    this.state =  {
+    this.state = {
       availableStudents: [...STUDENTS],
       availableStaff: [...STAFF],
       availableTopics: [...TOPICS],
@@ -99,7 +99,6 @@ class RandomQueue extends React.Component {
     this.windowFocused = this.windowFocused.bind(this)
     this.windowBlurred = this.windowBlurred.bind(this)
 
-    
     // Populate initial state with three questions
     // We use a deterministic selection here to avoid a mismatch between
     // rendering on the server and on the client
@@ -108,7 +107,10 @@ class RandomQueue extends React.Component {
       this.state.questions[i].location = LOCATIONS[i]
     }
     // Mark first question as being answered
-    this.state.questions[0].beingAnsweredBy = this.state.availableStaff.splice(0, 1)[0]
+    this.state.questions[0].beingAnsweredBy = this.state.availableStaff.splice(
+      0,
+      1
+    )[0]
   }
 
   advanceState() {
@@ -121,7 +123,7 @@ class RandomQueue extends React.Component {
     }
 
     // From the first question, send the entities back to the available pools
-    const q = newState.questions[0];
+    const q = newState.questions[0]
     newState.availableStudents.push(q.name)
     newState.availableStaff.push(q.beingAnsweredBy)
     newState.availableTopics.push(q.topic)
@@ -133,7 +135,9 @@ class RandomQueue extends React.Component {
     addRandomQuestion(newState)
 
     // Mark first question as being answered
-    newState.questions[0].beingAnsweredBy = pickRandomElement(newState.availableStaff)
+    newState.questions[0].beingAnsweredBy = pickRandomElement(
+      newState.availableStaff
+    )
 
     // Finally, update state
     this.setState(newState)
@@ -169,7 +173,9 @@ class RandomQueue extends React.Component {
   }
 
   render() {
-    const questions = this.state.questions.map((question) => <Question {...question} />)
+    const questions = this.state.questions.map(question => (
+      <Question {...question} />
+    ))
     return (
       <ListGroup>
         <FlipMove

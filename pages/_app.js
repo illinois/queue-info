@@ -1,24 +1,24 @@
-import React from "react";
-import App, { Container } from "next/app";
-import Head from "next/head";
-import { PageTransition } from "next-page-transitions";
-import Header from "../components/Header";
+import React from 'react'
+import App, { Container } from 'next/app'
+import Head from 'next/head'
+import { PageTransition } from 'next-page-transitions'
+import Header from '../components/Header'
 
-const TIMEOUT = 200;
+const TIMEOUT = 200
 
 export default class MyApp extends App {
   static async getInitialProps({ Component, router, ctx }) {
-    let pageProps = {};
+    let pageProps = {}
 
     if (Component.getInitialProps) {
-      pageProps = await Component.getInitialProps(ctx);
+      pageProps = await Component.getInitialProps(ctx)
     }
 
-    return { pageProps };
+    return { pageProps }
   }
 
   render() {
-    const { Component, pageProps, router } = this.props;
+    const { Component, pageProps, router } = this.props
     return (
       <Container>
         <Head>
@@ -66,6 +66,6 @@ export default class MyApp extends App {
           }
         `}</style>
       </Container>
-    );
+    )
   }
 }

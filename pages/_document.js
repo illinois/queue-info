@@ -26,11 +26,17 @@ export default class MyDocument extends Document {
           <meta property="og:url" content="https://queue.illinois.edu" />
           <meta property="og:type" content="website" />
           <meta property="og:title" content="Queue@Illinois" />
-          <meta property="og:image" content="https://queue.illinois.edu/static/opengraph.png" />
+          <meta
+            property="og:image"
+            content="https://queue.illinois.edu/static/opengraph.png"
+          />
           <meta property="og:image:width" content="800" />
           <meta property="og:image:height" content="400" />
-          <meta property="og:description" content="The queue allows students, instructors, advisors, and more to be productive and utilize their time more effectively." />
-          <meta name="twitter:card" content="summary_large_image"></meta>
+          <meta
+            property="og:description"
+            content="The queue allows students, instructors, advisors, and more to be productive and utilize their time more effectively."
+          />
+          <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:image" content="/static/opengraph.png" />
           <style>{dom.css()}</style>
         </Head>

@@ -1,5 +1,5 @@
-import React from "react";
-import { Container as ReactstrapContainer, Col, Row } from "reactstrap";
+import React from 'react'
+import { Container as ReactstrapContainer, Col, Row } from 'reactstrap'
 
 const Container = ({ children, ...rest }) => (
   <ReactstrapContainer {...rest}>
@@ -9,6 +9,6 @@ const Container = ({ children, ...rest }) => (
       </Col>
     </Row>
   </ReactstrapContainer>
-);
+)
 
-export default Container;
+export default Container
