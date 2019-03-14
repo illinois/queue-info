@@ -1,7 +1,8 @@
 import React from "react";
 import { MDXProvider } from "@mdx-js/tag";
+import { Row } from "reactstrap";
 
-import Container from '../Container'
+import Container from "../Container";
 import PostDate from "./PostDate";
 import PostAuthor from "./PostAuthor";
 
@@ -12,7 +13,7 @@ const components = {
   h1: props => <h1 className="h2" {...props} />,
   h2: props => <h2 className="h3" {...props} />,
   pre: props => {
-    const { className, ...rest } = props
+    const { className, ...rest } = props;
     return <pre className={`mt-0 mb-3 ${className}`} {...rest} />;
   }
 };
