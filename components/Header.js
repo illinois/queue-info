@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useCallback, useEffect } from "react";
 import {
   Navbar,
   NavbarBrand,
@@ -7,15 +7,21 @@ import {
   NavItem,
   NavLink,
   Collapse,
-  Container,
+  Container
 } from "reactstrap";
 import Link from "next/link";
 import { withRouter } from "next/router";
 import { useBoolean } from "react-hanger";
 
 const Header = ({ router }) => {
-  const isOpen = useBoolean(false)
+  const isOpen = useBoolean(false);
   const { route } = router;
+  useEffect(() => {
+    router.events.on('routeChangeStart', isOpen.setFalse)
+    return () => {
+      router.events.off('routeChangeStart', isOpen.setFalse)
+    }
+  })
   const isBlog = route.startsWith("/blog");
   return (
     <Navbar color="dark" dark expand="sm" className="mb-3 fixed-top">

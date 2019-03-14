@@ -19,7 +19,7 @@ const components = {
 
 export default meta => ({ children }) => {
   const authors = (meta.authors || []).map((author, idx, authors) => {
-    return <PostAuthor {...author} />;
+    return <PostAuthor {...author} key={author.name} />;
   });
   return (
     <Container className="mt-3">
