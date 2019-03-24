@@ -3,8 +3,8 @@ import Image from '../../components/Image'
 
 export const meta = {
   title:
-    'New Release: Confidential Queues, Programmatic Admission Control & More',
-  date: '2019-03-13',
+    'Announcing Queue v1.0.0: Confidential Queues, Programmatic Admission Control & More',
+  date: '2019-03-24T18:00:00-0500',
   featured: true,
   authors: [
     {
@@ -24,7 +24,13 @@ export default withPost({ ...meta })
 
 Welcome to the Queue Blog! This will be a place for us to share new queue features, course success stories, and more. The Queue is growing and is increasingly being used in non-technical areas, so we thought it would be good to have a place other than the [changelog](https://github.com/illinois/queue/blob/master/CHANGELOG.md) to talk about new features.
 
-We recently released a new version of the Queue with support for confidential queues, programmatic admission control, and more. Read on to hear more about these new features!
+## Queue v1.0.0
+
+Prior to today, we've been labeling releases with the date that they were deployed to production. Beginning today, we'll be using proper [semantic versioning](https://semver.org/) to tag future releases.
+
+Given that, we'd like to announce **Queue v1.0.0**! The Queue has been in active development for over a year now and already has thousands of users (5299, to be exact), so labeling this version is more of a formality that anything. Nonetheless, we're all excited to attach an official version number to it.
+
+This release of the Queue includes support for confidential queues, programmatic admission control, and more. Read on to hear more about these new features!
 
 ## Confidential queues
 
@@ -80,6 +86,8 @@ To configure an admission control policy for your queue, check out the new queue
 />
 
 ## Other changes
+
+- The course name is now shown on each queue's page. No more guessing which "Office Hours" queue you're looking at!
 
 - Errors from the network, the API, and more are now displayed directly to users instead of being silently ignored! Thanks to [James](https://github.com/james9909) for working on this.
 
