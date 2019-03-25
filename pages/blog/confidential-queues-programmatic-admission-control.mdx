@@ -1,0 +1,100 @@
+import withPost from '../../components/blog/WithPost'
+import Image from '../../components/Image'
+
+export const meta = {
+  title:
+    'Announcing Queue v1.0.0: Confidential Queues, Programmatic Admission Control & More',
+  date: '2019-03-24T18:00:00-0500',
+  featured: true,
+  authors: [
+    {
+      name: 'Nathan Walters',
+      github: 'nwalters512',
+      avatar: '/static/team/nathan.jpg',
+    },
+    {
+      name: 'Jacqueline Osborn',
+      github: 'jackieo5023',
+      avatar: '/static/team/jackie.jpeg',
+    },
+  ],
+}
+
+export default withPost({ ...meta })
+
+Welcome to the Queue Blog! This will be a place for us to share new queue features, course success stories, and more. The Queue is growing and is increasingly being used in non-technical areas, so we thought it would be good to have a place other than the [changelog](https://github.com/illinois/queue/blob/master/CHANGELOG.md) to talk about new features.
+
+## Queue v1.0.0
+
+Prior to today, we've been labeling releases with the date that they were deployed to production. Beginning today, we'll be using proper [semantic versioning](https://semver.org/) to tag future releases.
+
+Given that, we'd like to announce **Queue v1.0.0**! The Queue has been in active development for over a year now and already has thousands of users (5299, to be exact), so labeling this version is more of a formality that anything. Nonetheless, we're all excited to attach an official version number to it.
+
+This release of the Queue includes support for confidential queues, programmatic admission control, and more. Read on to hear more about these new features!
+
+## Confidential queues
+
+In an ordinary queue, information such as a student's name, location, and topic are available for anyone to view. However, we've noticed a number of use cases where you would want to keep this information private, such as academic advising and counseling. Thus, we've implemented a new type of queue &mdash; a _confidential queue_! With a confidential queue, other students only know the number of people on the queue and the number of people in front of them.
+
+For members on course staff of a confidential queue, the queue will still look the same as always, save for an icon denoting the confidentiality of the queue by the title. Students on the queue will see something like the picture below.
+
+<Image
+  src="/static/blog/confidential-queues-programmatic-admission-control/confidential-queue-student-view.jpg"
+  caption="The confidential queue view from a student perspective"
+  shadow
+/>
+
+To create a confidential queue, all you have to do is toggle the setting on creation! Keep in mind that you will not be able to change this once the queue is created.
+
+## Programmatic admission control
+
+By default, anyone at Illinois can add themselves to any other queue without any restrictions. This is generally a good thing &mdash; it allows for flexibility and allows instructors to not have to worry about keeping rosters up to date. So far we haven't seen people abusing the system by adding themselves to random queues, which is great!
+
+However, maybe you do want to restrict your queue to only people on your official roster. Or maybe you have other reasons you want to keep certain questions off your queue. For instance, in CS 225, some people put non-descriptive topics like "lab" or "mp6". We want to encourage students to write descriptive topics to show that they've put some thought into the question they're asking.
+
+Enter _programmatic admission control_. This feature allows you to specify an HTTP endpoint that will be used to validate each question that is submitted to your queue. Based on the topic, location, or user information, you can decide to either allow a question or reject it and show a reason to the student.
+
+Here's a simple example written in Node with [Express](https://expressjs.com/).
+
+```js
+const express = require('express')
+const bodyParser = require('body-parser')
+app.use(bodyParser.json())
+
+app.post('/', (req, res) => {
+  if (req.body.topic && req.body.topic.length >= 10) {
+    res.status(200).json({ allowed: true })
+  } else {
+    res.status(200).json({
+      allowed: false,
+      reason: 'Topic must be at least 10 characters'
+    })
+  }
+})
+
+app.listen(port, () => console.log(`listening on port ${port}`)
+```
+
+This is a pretty simple example of an admission control policy: it only requires that question have a topic with 10 or more characters. But because the interface to your policy is plain old HTTP, you can write your policy in any language, with any tool, using any data you want. For example, in CS 225, we're working on a machine learning model that can automatically encourage students to write more descriptive questions without any intervention from staff!
+
+To configure an admission control policy for your queue, check out the new queue settings page, accessible from the "Settings" button on your queue cards. Look out for more new features to be available on this page in the coming months!
+
+<Image
+  src="/static/blog/confidential-queues-programmatic-admission-control/admission-control-settings.png"
+  caption="The admission control panel on the new queue settings page"
+  shadow
+/>
+
+## Other changes
+
+- The course name is now shown on each queue's page. No more guessing which "Office Hours" queue you're looking at!
+
+- Errors from the network, the API, and more are now displayed directly to users instead of being silently ignored! Thanks to [James](https://github.com/james9909) for working on this.
+
+- There's now a button to delete all questions on a queue when the queue is closed. If you reach the end of office hours and there are still a lot of people on your queue, this makes it easy to clear the remaining questions so that you can start with an empty queue the next day. Thanks to [Rittika](https://github.com/rittikaadhikari) for implementing this!
+
+- Logouts are now synchronized across tabs. If you log out on one tab, you'll be redirected back to the login page on any other tabs you have open. Thanks to [James](https://github.com/james9909) for this feature.
+
+## Community
+
+As always, a reminder that the Queue is open source! We rely on contributions from users across the university to bring new features and improvements to the Queue. If you have a suggestion for a new feature, you can start a discussion on a [GitHub issue](https://github.com/illinois/queue/issues). Or, if you want to start contributing, you can join the [Illinois OSS Slack](https://illinois-oss.slack.com/) to work with other Queue developers.
