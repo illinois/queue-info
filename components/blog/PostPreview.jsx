@@ -4,7 +4,7 @@ import formatDate from 'date-fns/format'
 import distanceInWordsToNow from 'date-fns/distance_in_words_to_now'
 
 const PostPreview = ({ meta, slug }) => (
-  <article>
+  <article className="mb-5">
     <header>
       <h3>
         <Link href={`/blog/${slug}`}>
