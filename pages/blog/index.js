@@ -15,7 +15,15 @@ function importAll(r) {
 
 const blogItemsMeta = importAll(require.context('.', false, /\.mdx$/))
 
-const items = blogItemsMeta.map(({ post, slug }) => {
+const dateSortDesc = (a, b) => {
+  const date1 = new Date(a.post.meta.date)
+  const date2 = new Date(b.post.meta.date)
+  if (date1 > date2) return -1
+  if (date1 < date2) return 1
+  return 0
+}
+
+const items = blogItemsMeta.sort(dateSortDesc).map(({ post, slug }) => {
   return <PostPreview meta={post.meta} slug={slug} key={slug} />
 })
 
