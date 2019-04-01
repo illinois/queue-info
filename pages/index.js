@@ -138,7 +138,7 @@ export default () => {
               explanation. By grouping students together based on the topic they
               are having trouble with, the instructor doesn&apos;t have to
               explain the same concept to several students separately. While in
-              class, students can post questions in the queue so that
+              class, students can post questions in the {brandTextLower} so that
               instructors can better prepare themselves prior to helping them.
             </p>
           </Col>
@@ -262,7 +262,7 @@ export default () => {
             <br />
             On our spiffy domain name
             <br />
-            "Hi queue!", in haiku
+            "Hi {brandTextLower}!", in haiku
           </i>
         </div>
       </Container>
