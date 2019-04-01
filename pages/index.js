@@ -10,6 +10,7 @@ import {
   faUsers,
 } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faSlack } from '@fortawesome/free-brands-svg-icons'
+import { isAfter } from 'date-fns'
 
 import { blogItemsMeta } from './blog'
 import HeadTitle from '../components/HeadTitle'
@@ -18,6 +19,26 @@ export default () => {
   const blogPost = (blogItemsMeta || []).find(post => {
     return post.post.meta.featured
   })
+
+  let brandText, brandTextLower
+  if (isAfter('2019-04-02T00:00:00-0500')) {
+    brandText = 'Queue'
+    brandTextLower = 'queue'
+  } else {
+    // April Fools'!
+    brandText = (
+      <>
+        <span style={{ textDecoration: 'line-through' }}>Queue</span>
+        Stack
+      </>
+    )
+    brandTextLower = (
+      <>
+        <span style={{ textDecoration: 'line-through' }}>queue</span>
+        stack
+      </>
+    )
+  }
 
   return (
     <>
@@ -30,10 +51,10 @@ export default () => {
             lg="6"
             className="d-flex flex-column justify-content-center py-4 text-center"
           >
-            <h1 className="text-light mb-4">Queue@Illinois</h1>
+            <h1 className="text-light mb-4">{brandText}@Illinois</h1>
             <h2 className="text-light mb-4 h5">
-              The Queue allows students, instructors, advisors, and more to be
-              productive and utilize their time more effectively.
+              The {brandText} allows students, instructors, advisors, and more
+              to be productive and utilize their time more effectively.
             </h2>
             <div>
               <Button
@@ -42,7 +63,7 @@ export default () => {
                 tag="a"
                 href="https://queue.illinois.edu/q/"
               >
-                Go to the Queue
+                Go to the {brandText}
               </Button>
               <Button
                 color="secondary"
@@ -50,7 +71,7 @@ export default () => {
                 tag="a"
                 href="https://go.illinois.edu/new-queue/"
               >
-                Request a queue
+                Request a {brandTextLower}
               </Button>
             </div>
           </Col>
@@ -94,8 +115,8 @@ export default () => {
               Open Office Hours
             </h4>
             <p className="mb-4">
-              The Queue eliminates the need for hand-raising and trying to keep
-              track of who raised their hand first. If an instructor has
+              The {brandText} eliminates the need for hand-raising and trying to
+              keep track of who raised their hand first. If an instructor has
               overflowing office hours, instructors can allow students can let
               the instructor know where they are within a nearby area, and what
               they need help with.
@@ -113,12 +134,12 @@ export default () => {
               Group Formation and Active Learning
             </h4>
             <p className="mb-4">
-              Instructors can use the Queue for group formation and explanation.
-              By grouping students together based on the topic they are having
-              trouble with, the instructor doesn&apos;t have to explain the same
-              concept to several students separately. While in class, students
-              can post questions in the queue so that instructors can better
-              prepare themselves prior to helping them.
+              Instructors can use the {brandText} for group formation and
+              explanation. By grouping students together based on the topic they
+              are having trouble with, the instructor doesn&apos;t have to
+              explain the same concept to several students separately. While in
+              class, students can post questions in the queue so that
+              instructors can better prepare themselves prior to helping them.
             </p>
           </Col>
 
@@ -133,10 +154,10 @@ export default () => {
               Real Time
             </h4>
             <p className="mb-4">
-              Students can monitor their position in a queue without needing to
-              refresh the page. And instructors will get notifications whenever
-              someone new joins the queue so they can help students as quickly
-              as possible.
+              Students can monitor their position in a {brandTextLower} without
+              needing to refresh the page. And instructors will get
+              notifications whenever someone new joins the {brandTextLower} so
+              they can help students as quickly as possible.
             </p>
           </Col>
 
@@ -152,9 +173,9 @@ export default () => {
             </h4>
             <Badge color="success">Coming soon!</Badge>
             <p className="mb-4">
-              Instructors can harness data from their queues to understand how
-              office hours are used, how to better schedule their staff, and
-              more.
+              Instructors can harness data from their {brandTextLower}s to
+              understand how office hours are used, how to better schedule their
+              staff, and more.
             </p>
           </Col>
         </Row>
@@ -165,10 +186,10 @@ export default () => {
             <Col>
               <h3>Open Source</h3>
               <p>
-                Don&apos;t see the feature you want? The Queue is open-source,
-                so anyone can contribute new features or bug fixes. Or, join the
-                conversation on the Slack team or GitHub issues to help shape
-                the future of the Queue.
+                Don&apos;t see the feature you want? The {brandText} is
+                open-source, so anyone can contribute new features or bug fixes.
+                Or, join the conversation on the Slack team or GitHub issues to
+                help shape the future of the {brandText}.
               </p>
               <Button
                 color="light"
@@ -207,7 +228,7 @@ export default () => {
           <Col md="6">
             <h3 className="bottom-cta-header">Ready to get started?</h3>
             <p className="bottom-cta-copy">
-              Sign in or request a queue for your course.
+              Sign in or request a {brandTextLower} for your course.
             </p>
           </Col>
           <Col
@@ -220,7 +241,7 @@ export default () => {
               tag="a"
               href="https://queue.illinois.edu/q/"
             >
-              Go to the Queue
+              Go to the {brandText}
             </Button>
             <Button
               color="secondary"
@@ -228,7 +249,7 @@ export default () => {
               tag="a"
               href="https://go.illinois.edu/new-queue/"
             >
-              Request a queue
+              Request a {brandTextLower}
             </Button>
           </Col>
         </Row>
@@ -237,7 +258,7 @@ export default () => {
       <Container fluid className="py-4">
         <div className="text-center text-muted">
           <i>
-            Hello from the queue!
+            Hello from the {brandTextLower}!
             <br />
             On our spiffy domain name
             <br />
