@@ -27,7 +27,7 @@ const Header = ({ router }) => {
     <Navbar color="dark" dark expand="sm" className="mb-3 fixed-top">
       <Container>
         <Link href="/" passHref>
-          <NavbarBrand>Queue@Illinois</NavbarBrand>
+          <NavbarBrand>Queue</NavbarBrand>
         </Link>
         <NavbarToggler onClick={isOpen.toggle} />
         <Collapse isOpen={isOpen.value} navbar>
