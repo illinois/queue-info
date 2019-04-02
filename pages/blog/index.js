@@ -1,5 +1,4 @@
 import React from 'react'
-import Head from 'next/head'
 import PostPreview from '../../components/blog/PostPreview'
 import Container from '../../components/Container'
 import HeadTitle from '../../components/HeadTitle'
