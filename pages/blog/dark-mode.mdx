@@ -11,6 +11,11 @@ export const meta = {
       github: 'jackieo5023',
       avatar: '/static/team/jackie.jpeg',
     },
+    {
+      name: 'James Wang',
+      github: 'james9909',
+      avatar: '/static/team/james.jpg',
+    },
   ],
 }
 
@@ -27,3 +32,14 @@ If you've logged into the queue recently, you may have noticed there is a new to
 />
 
 ## Access Tokens
+
+We've also rolled out access tokens, which can be managed through the user settings page. These tokens allow you to access the API as if you were logged in through the website. As such, you should be careful about keeping your tokens private. With an access token, you can:
+
+- Add yourself to the queue
+- List all questions on a specific queue
+- Manage access tokens
+- Do anything else the web interface can do
+
+Authenticating through an access token is pretty simple: just append `?private_token=...` to the URL or use the `Private-Token` header.
+
+For specifics about the API, check out the [docs](https://github.com/illinois/queue/blob/master/doc/API.md).
