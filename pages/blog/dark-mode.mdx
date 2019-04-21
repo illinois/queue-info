@@ -3,7 +3,7 @@ import Image from '../../components/Image'
 
 export const meta = {
   title: 'Announcing Queue v1.2.0: Dark Mode & Access Tokens!',
-  date: '2019-04-17T18:00:00-0500',
+  date: '2019-04-21T19:00:00-0500',
   featured: true,
   authors: [
     {
@@ -23,7 +23,7 @@ export default withPost({ ...meta })
 
 ## Dark Mode
 
-If you've logged into the queue recently, you may have noticed there is a new toggle near the logout button. Clicking this will enable our new highly sought after feature - dark mode! We hope being on the queue will no longer burn out your eyes (just your soul).
+If you've logged into the queue recently, you may have noticed there is a new toggle near the logout button. Clicking this will enable our new highly sought-after feature - dark mode! We hope being on the queue will no longer burn out your eyes (just your soul).
 
 <Image
   src="/static/blog/dark-mode/dark-mode-view.jpg"
@@ -33,13 +33,13 @@ If you've logged into the queue recently, you may have noticed there is a new to
 
 ## Access Tokens
 
-We've also rolled out access tokens, which can be managed through the user settings page. These tokens allow you to access the API as if you were logged in through the website. As such, you should be careful about keeping your tokens private. With an access token, you can:
+We've also rolled out access tokens, which can be managed through the user settings page (which can be accessed by clicking on your name, next to the logout button). These tokens allow you to access the API as if you were logged in through the website. As such, you should be careful about keeping your tokens private. With an access token, you can:
 
 - Add yourself to the queue
 - List all questions on a specific queue
 - Manage access tokens
 - Do anything else the web interface can do
 
-Authenticating through an access token is pretty simple: just append `?private_token=...` to the URL or use the `Private-Token` header.
+Authenticating through an access token is simple: just append `?private_token=...` to the URL or use the `Private-Token` header.
 
-For specifics about the API, check out the [docs](https://github.com/illinois/queue/blob/master/doc/API.md).
+For specifics about the API, check out [the API docs](https://github.com/illinois/queue/blob/master/doc/API.md).
