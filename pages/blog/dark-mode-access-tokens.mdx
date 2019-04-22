@@ -1,0 +1,71 @@
+import withPost from '../../components/blog/WithPost'
+import Image from '../../components/Image'
+
+export const meta = {
+  title: 'Announcing Queue v1.2.0: Dark Mode & Access Tokens!',
+  date: '2019-04-22T17:30:00-0500',
+  featured: true,
+  authors: [
+    {
+      name: 'Jacqueline Osborn',
+      github: 'jackieo5023',
+      avatar: '/static/team/jackie.jpeg',
+    },
+    {
+      name: 'James Wang',
+      github: 'james9909',
+      avatar: '/static/team/james.jpg',
+    },
+    {
+      name: 'Nathan Walters',
+      github: 'nwalters512',
+      avatar: '/static/team/nathan.jpg',
+    },
+  ],
+}
+
+export default withPost({ ...meta })
+
+## Queue v1.2.0
+
+We've released v1.2.0 of the Queue! This release includes dark mode, API access tokens, and a bunch of smaller bug fixes and enhancements. Read on to learn more!
+
+## Dark Mode
+
+If you've logged into the queue recently, you may have noticed there is a new toggle near the logout button. Clicking this will enable our new highly sought-after feature - dark mode! We hope being on the queue will no longer burn out your eyes (just your soul).
+
+<Image
+  src="/static/blog/dark-mode/dark-mode-view.jpg"
+  caption="Dark mode"
+  shadow
+/>
+
+## Access Tokens
+
+The philosophy behind the Queue has always been to make it programmable and developer-first, which could enable integrations with services like PrairieLearn and the CBTF. To bring us closer to that goal, we recently rolled out [programmatic access control](/blog/confidential-queues-programmatic-admission-control), and now: access tokens!
+
+Access tokens can be managed through the user settings page (which can be accessed by clicking on your name, next to the logout button). These tokens allow you to access the API as if you were logged in through the website. As such, you should be careful about keeping your tokens private. With an access token, you can:
+
+- Add yourself to the queue
+- List all questions on a specific queue
+- Manage access tokens
+- Do anything else the web interface can do
+
+Authenticating through an access token is simple: just append `?private_token=...` to the URL or use the `Private-Token` header.
+
+For specifics about the API, check out [the API docs](https://github.com/illinois/queue/blob/master/doc/API.md).
+
+## Other changes
+
+Since the [v1.0.0 release](confidential-queues-programmatic-admission-control), there have been a few other behind-the-scenes improvements and bug fixes:
+
+- Disconnecting from the websocket will no longer cause a 404 page to appear; the app will now automatically try to reconnect and will show status updates to users.
+- A race condition with realtime updates was discovered and fixed.
+- There's a new admin-facing page for admins to manage the list of other admins. No more manual database queries to add or remove queue administrators!
+- An issue where the course page would double-render when loading has been fixed.
+
+Check out [the changelog on GitHub](https://github.com/illinois/queue/blob/master/CHANGELOG.md) to see the full list of recent changes!
+
+## Community
+
+As always, a reminder that the Queue is open source! We rely on contributions from users across the university to bring new features and improvements to the Queue. If you have a suggestion for a new feature, you can start a discussion on a [GitHub issue](https://github.com/illinois/queue/issues). Or, if you want to start contributing, you can join the [Illinois OSS Slack](https://illinois-oss.slack.com/) to work with other Queue developers.
