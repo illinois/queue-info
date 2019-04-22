@@ -52,7 +52,14 @@ For specifics about the API, check out [the API docs](https://github.com/illinoi
 
 ## Other changes
 
-Since the [v1.0.0 release](confidential-queues-programmatic-admission-control),
+Since the [v1.0.0 release](confidential-queues-programmatic-admission-control), there have been a few other behind-the-scenes improvements and bug fixes:
+
+- Disconnecting from the websocket will no longer cause a 404 page to appear; the app will now automatically try to reconnect and will show status updates to users.
+- A race condition with realtime updates was discovered and fixed.
+- There's a new admin-facing page for admins to manage the list of other admins. No more manual database queries to add or remove queue administrators!
+- An issue where the course page would double-render when loading has been fixed.
+
+Check out [the changelog on GitHub](https://github.com/illinois/queue/blob/master/CHANGELOG.md) to see the full list of recent changes!
 
 ## Community
 
