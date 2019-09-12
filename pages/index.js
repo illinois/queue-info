@@ -44,14 +44,15 @@ export default () => {
               >
                 Go to the Queue
               </Button>
-              <Button
-                color="secondary"
-                className="m-2"
-                tag="a"
-                href="https://go.illinois.edu/new-queue/"
-              >
-                Request a queue
-              </Button>
+              <p className="text-light mt-2">
+                Are you a member of Course Staff?{' '}
+                <a
+                  style={{ color: '#4396ca' }}
+                  href="https://go.illinois.edu/new-queue/"
+                >
+                  Request a queue
+                </a>
+              </p>
             </div>
           </Col>
         </Row>

@@ -2,7 +2,7 @@ import React from 'react'
 import NextLink from 'next/link'
 
 const GenericLink = props => {
-  if (!props.href.startsWith('http://') && !props.href.startsWith('http://')) {
+  if (!props.href.startsWith('http://') && !props.href.startsWith('https://')) {
     return <InternalLink {...props} />
   } else {
     return <OtherLink {...props} />
