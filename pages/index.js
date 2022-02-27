@@ -238,6 +238,8 @@ export default () => {
       <Container fluid className="py-4">
         <div className="text-center text-muted">
           <i>
+            ---
+            <br />
             Hello from the queue!
             <br />
             On our spiffy domain name
